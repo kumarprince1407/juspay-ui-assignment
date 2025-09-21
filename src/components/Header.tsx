@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`flex items-center justify-between px-6 py-4 border-b w-[1245px] h-16 ${
+      className={`flex items-center justify-between px-6 py-4 border-b w-full h-16 ${
         isDark ? "bg-black border-gray-700" : "bg-white border-gray-200"
       }`}
     >
