@@ -1,10 +1,10 @@
+// Updated Dashboard Component (without RightSidebar - now handled in Layout)
 import React from "react";
 import Header from "./Header";
 import { ThemeContext } from "./ThemeContext";
 import LeftSidebar from "./LeftSidebar";
-import RightSidebar from "./RightSidebar";
 
-// Dashboard Middle Content Component
+// Dashboard Middle Content Component (same as before)
 const DashboardMiddleContent: React.FC = () => {
   const { isDark } = React.useContext(ThemeContext);
 
@@ -60,8 +60,8 @@ const DashboardMiddleContent: React.FC = () => {
 
   return (
     <div
-      className={`flex-1 p-6 overflow-y-auto ${
-        isDark ? "bg-gray-900" : "bg-gray-50"
+      className={`flex-1 min-w-0 p-4 overflow-y-auto ${
+        isDark ? "bg-black" : "bg-gray-50"
       }`}
     >
       <div className="mb-6">
@@ -77,33 +77,35 @@ const DashboardMiddleContent: React.FC = () => {
       {/* Stats Cards and Charts Row */}
       <div className="flex gap-4 mb-6">
         {/* Left Section - Stats Cards */}
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           {/* First Column - Stats Cards */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Customers Card */}
             <div
-              className={`p-4 rounded-lg mb-9 w-[202px] h-[112px] ${
+              className={`p-3 rounded-lg w-48 h-24 ${
                 isDark ? "bg-gray-800" : "bg-blue-50"
               } shadow-sm`}
             >
-              <div className="flex flex-col justify-around">
+              <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-14 text-left font-semibold ${
+                  className={`text-sm text-left font-semibold ${
                     isDark ? "text-gray-400" : "text-gray-600"
-                  } mb-1`}
+                  }`}
                 >
                   Customers
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <div
-                    className={`text-[24px] font-semibold ${
+                    className={`text-xl font-semibold ${
                       isDark ? "text-white" : "text-gray-900"
-                    } mb-2`}
+                    }`}
                   >
                     3,781
                   </div>
-                  <div className="text-sm text-right items-center pt-2 ">
-                    +11.01% <span className="ml-1"> ↗</span>
+                  <div className={`text-xs ${
+                      isDark ? "text-white" : "text-gray-900"
+                                                               }`}>
+                    +11.01% <span className="ml-1">↗</span>
                   </div>
                 </div>
               </div>
@@ -111,28 +113,30 @@ const DashboardMiddleContent: React.FC = () => {
 
             {/* Revenue Card */}
             <div
-              className={`p-4 rounded-lg mt-9 w-[202px] h-[112px] ${
+              className={`p-3 rounded-lg w-48 h-24 ${
                 isDark ? "bg-gray-800" : "bg-gray-50"
               } shadow-sm`}
             >
-              <div className="flex flex-col  justify-around">
+              <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-14 text-left font-semibold ${
+                  className={`text-sm text-left font-semibold ${
                     isDark ? "text-gray-400" : "text-gray-600"
-                  } mb-1`}
+                  }`}
                 >
                   Revenue
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <div
-                    className={`text-[24px] font-semibold ${
+                    className={`text-xl font-semibold ${
                       isDark ? "text-white" : "text-gray-900"
-                    } mb-2`}
+                    }`}
                   >
                     $695
                   </div>
-                  <div className="text-sm text-right items-center pt-2 ">
-                    +15.03% <span className="ml-1"> ↗</span>
+                  <div className={`text-xs ${
+                                             isDark ? "text-white" : "text-gray-900"
+                                                                                      }`}>
+                    +15.03% <span className="ml-1">↗</span>
                   </div>
                 </div>
               </div>
@@ -140,31 +144,33 @@ const DashboardMiddleContent: React.FC = () => {
           </div>
 
           {/* Second Column - More Stats Cards */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Orders Card */}
             <div
-              className={`p-4 rounded-lg mb-9 w-[202px] h-[112px] ${
+              className={`p-3 rounded-lg w-48 h-24 ${
                 isDark ? "bg-gray-800" : "bg-blue-50"
               } shadow-sm`}
             >
-              <div className="flex flex-col justify-around">
+              <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-14 text-left font-semibold ${
+                  className={`text-sm text-left font-semibold ${
                     isDark ? "text-gray-400" : "text-gray-600"
-                  } mb-1`}
+                  }`}
                 >
                   Orders
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <div
-                    className={`text-[24px] font-semibold ${
+                    className={`text-xl font-semibold ${
                       isDark ? "text-white" : "text-gray-900"
-                    } mb-2`}
+                    }`}
                   >
                     1,219
                   </div>
-                  <div className="text-sm text-right items-center pt-2 ">
-                    -0.03% <span className="ml-1"> ↘</span>
+                  <div className={`text-xs ${
+                                             isDark ? "text-white" : "text-gray-900"
+                                                                                      }`}>
+                    -0.03% <span className="ml-1">↘</span>
                   </div>
                 </div>
               </div>
@@ -172,28 +178,30 @@ const DashboardMiddleContent: React.FC = () => {
 
             {/* Growth Card */}
             <div
-              className={`p-4 rounded-lg mb-9 w-[202px] h-[112px] ${
+              className={`p-3 rounded-lg w-48 h-24 ${
                 isDark ? "bg-gray-800" : "bg-blue-50"
               } shadow-sm`}
             >
-              <div className="flex flex-col justify-around">
+              <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-14 text-left font-semibold ${
+                  className={`text-sm text-left font-semibold ${
                     isDark ? "text-gray-400" : "text-gray-600"
-                  } mb-1`}
+                  }`}
                 >
                   Growth
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <div
-                    className={`text-[24px] font-semibold ${
+                    className={`text-xl font-semibold ${
                       isDark ? "text-white" : "text-gray-900"
-                    } mb-2`}
+                    }`}
                   >
                     30.1%
                   </div>
-                  <div className="text-sm text-right items-center pt-2 ">
-                    +6.08% <span className="ml-1"> ↗</span>
+                  <div className={`text-xs ${
+                                             isDark ? "text-white" : "text-gray-900"
+                                                                                      }`}>
+                    +6.08% <span className="ml-1">↗</span>
                   </div>
                 </div>
               </div>
@@ -203,20 +211,19 @@ const DashboardMiddleContent: React.FC = () => {
 
         {/* Right Section - Projections vs Actuals Chart */}
         <div
-          className={`w-[432px] h-[252px] p-6 rounded-2xl flex flex-col gap-2 ${
+          className={`flex-1 min-w-0 max-w-md p-4 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-[#F7F9FB]"
           } shadow-sm`}
         >
-          {/* Header */}
-          <div className="w-[384px] h-5">
+          <div className="mb-2">
             <h3 className="font-inter font-semibold text-sm leading-5 tracking-normal text-[#1C1C1C]">
               Projections vs Actuals
             </h3>
           </div>
 
           {/* Bar Chart Container */}
-          <div className="w-[384px] h-[168px] flex items-end justify-center gap-4">
-            <svg width="100%" height="100%" viewBox="0 0 384 168">
+          <div className="w-full h-40 flex items-end justify-center">
+            <svg width="100%" height="100%" viewBox="0 0 300 160">
               {/* Y-axis values on left */}
               <text x="8" y="15" className="text-xs fill-gray-500 font-inter">
                 4M
@@ -234,210 +241,37 @@ const DashboardMiddleContent: React.FC = () => {
                 0
               </text>
 
-              {/* Horizontal grid lines */}
-              <line
-                x1="25"
-                y1="12"
-                x2="384"
-                y2="12"
-                stroke="#E5E7EB"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-              <line
-                x1="25"
-                y1="42"
-                x2="384"
-                y2="42"
-                stroke="#E5E7EB"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-              <line
-                x1="25"
-                y1="72"
-                x2="384"
-                y2="72"
-                stroke="#E5E7EB"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-              <line
-                x1="25"
-                y1="102"
-                x2="384"
-                y2="102"
-                stroke="#E5E7EB"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-              <line
-                x1="25"
-                y1="132"
-                x2="384"
-                y2="132"
-                stroke="#E5E7EB"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-
-              {/* Jan - Single stacked bar */}
-              <rect
-                x="55"
-                y="72"
-                width="20"
-                height="40"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="55"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
-
-              {/* Feb - Single stacked bar */}
-              <rect
-                x="105"
-                y="32"
-                width="20"
-                height="60"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="105"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
-
-              {/* Mar - Single stacked bar */}
-              <rect
-                x="155"
-                y="57"
-                width="20"
-                height="35"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="155"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
-
-              {/* Apr - Single stacked bar */}
-              <rect
-                x="205"
-                y="42"
-                width="20"
-                height="50"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="205"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
-
-              {/* May - Single stacked bar */}
-              <rect
-                x="255"
-                y="72"
-                width="20"
-                height="20"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="255"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
-
-              {/* Jun - Single stacked bar */}
-              <rect
-                x="305"
-                y="42"
-                width="20"
-                height="50"
-                fill="#5B9BD5"
-                rx="2"
-              />
-              <rect
-                x="305"
-                y="92"
-                width="20"
-                height="40"
-                fill="#C6D7EB"
-                rx="2"
-              />
+              {/* Chart bars */}
+              <rect x="45" y="72" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="45" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="85" y="32" width="15" height="50" fill="#5B9BD5" rx="2" />
+              <rect x="85" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="125" y="57" width="15" height="25" fill="#5B9BD5" rx="2" />
+              <rect x="125" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="165" y="42" width="15" height="40" fill="#5B9BD5" rx="2" />
+              <rect x="165" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="205" y="72" width="15" height="15" fill="#5B9BD5" rx="2" />
+              <rect x="205" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="245" y="42" width="15" height="40" fill="#5B9BD5" rx="2" />
+              <rect x="245" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
 
               {/* Month labels */}
-              <text x="62" y="150" className="text-xs fill-gray-500 font-inter">
-                Jan
-              </text>
-              <text
-                x="112"
-                y="150"
-                className="text-xs fill-gray-500 font-inter"
-              >
-                Feb
-              </text>
-              <text
-                x="162"
-                y="150"
-                className="text-xs fill-gray-500 font-inter"
-              >
-                Mar
-              </text>
-              <text
-                x="212"
-                y="150"
-                className="text-xs fill-gray-500 font-inter"
-              >
-                Apr
-              </text>
-              <text
-                x="262"
-                y="150"
-                className="text-xs fill-gray-500 font-inter"
-              >
-                May
-              </text>
-              <text
-                x="312"
-                y="150"
-                className="text-xs fill-gray-500 font-inter"
-              >
-                Jun
-              </text>
+              <text x="50" y="150" className="text-xs fill-gray-500 font-inter">Jan</text>
+              <text x="90" y="150" className="text-xs fill-gray-500 font-inter">Feb</text>
+              <text x="130" y="150" className="text-xs fill-gray-500 font-inter">Mar</text>
+              <text x="170" y="150" className="text-xs fill-gray-500 font-inter">Apr</text>
+              <text x="210" y="150" className="text-xs fill-gray-500 font-inter">May</text>
+              <text x="250" y="150" className="text-xs fill-gray-500 font-inter">Jun</text>
             </svg>
           </div>
         </div>
       </div>
 
       {/* Revenue Chart and Revenue by Location Row */}
-      <div className="flex gap-7 mb-6">
+      <div className="flex gap-4 mb-6">
         {/* Revenue Chart */}
         <div
-          className={`w-[662px] min-w-[662px] h-[318px] p-6 rounded-2xl ${
+          className={`flex-1 min-w-0 p-4 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-white"
           } shadow-sm`}
         >
@@ -464,143 +298,38 @@ const DashboardMiddleContent: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="h-[242px] flex items-center justify-center">
-            <svg width="100%" height="100%" viewBox="0 0 600 242">
-              {/* Grid lines */}
-              <defs>
-                <pattern
-                  id="grid"
-                  width="60"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 60 0 L 0 0 0 40"
-                    fill="none"
-                    stroke={isDark ? "#374151" : "#F3F4F6"}
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-
-              {/* Y-axis labels */}
-              <text
-                x="15"
-                y="30"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                30M
-              </text>
-              <text
-                x="15"
-                y="90"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                20M
-              </text>
-              <text
-                x="15"
-                y="150"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                10M
-              </text>
-              <text
-                x="25"
-                y="220"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                0
-              </text>
-
-              {/* Current Week Line (Black/Dark) */}
+          <div className="h-48 flex items-center justify-center">
+            <svg width="100%" height="100%" viewBox="0 0 500 200">
+              {/* Current Week Line */}
               <polyline
-                points="60,160 120,130 180,140 240,110 300,125 360,100 420,115 480,95 540,110"
+                points="50,120 100,100 150,110 200,85 250,95 300,75 350,90 400,70 450,85"
                 fill="none"
                 stroke={isDark ? "#FFFFFF" : "#000000"}
                 strokeWidth="2"
               />
-
-              {/* Previous Week Line (Gray, Dashed) */}
+              {/* Previous Week Line */}
               <polyline
-                points="60,180 120,165 180,170 240,150 300,165 360,140 420,155 480,135 540,150"
+                points="50,140 100,125 150,135 200,115 250,130 300,110 350,125 400,105 450,120"
                 fill="none"
                 stroke={isDark ? "#9CA3AF" : "#6B7280"}
                 strokeWidth="2"
                 strokeDasharray="5,5"
               />
-
               {/* Month labels */}
-              <text
-                x="80"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Jan
-              </text>
-              <text
-                x="160"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Feb
-              </text>
-              <text
-                x="240"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Mar
-              </text>
-              <text
-                x="320"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Apr
-              </text>
-              <text
-                x="400"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                May
-              </text>
-              <text
-                x="480"
-                y="235"
-                className={`text-xs fill-current ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Jun
-              </text>
+              <text x="70" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jan</text>
+              <text x="130" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Feb</text>
+              <text x="190" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Mar</text>
+              <text x="250" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Apr</text>
+              <text x="310" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jun</text>
+              <text x="370" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>May</text>
+              <text x="430" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jun</text>
             </svg>
           </div>
         </div>
 
         {/* Revenue by Location */}
         <div
-          className={`w-[202px] min-w-[202px] max-w-[272px] h-[318px] p-6 rounded-2xl ${
+          className={`w-48 flex-shrink-0 p-4 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-white"
           } shadow-sm`}
         >
@@ -611,7 +340,7 @@ const DashboardMiddleContent: React.FC = () => {
           >
             Revenue by Location
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {locationData.map((location, index) => (
               <div key={index} className="flex justify-between items-center">
                 <span
@@ -635,10 +364,10 @@ const DashboardMiddleContent: React.FC = () => {
       </div>
 
       {/* Bottom Row - Top Selling Products and Total Sales */}
-      <div className="flex gap-7">
+      <div className="flex gap-4">
         {/* Top Selling Products */}
         <div
-          className={`flex-1 p-6 rounded-2xl ${
+          className={`flex-1 min-w-0 p-4 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-white"
           } shadow-sm`}
         >
@@ -696,28 +425,28 @@ const DashboardMiddleContent: React.FC = () => {
                     }`}
                   >
                     <td
-                      className={`py-3 text-sm ${
+                      className={`py-2 text-sm ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
                     >
                       {product.name}
                     </td>
                     <td
-                      className={`py-3 text-sm ${
+                      className={`py-2 text-sm ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
                       {product.price}
                     </td>
                     <td
-                      className={`py-3 text-sm ${
+                      className={`py-2 text-sm ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
                       {product.quantity}
                     </td>
                     <td
-                      className={`py-3 text-sm font-medium ${
+                      className={`py-2 text-sm font-medium ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
                     >
@@ -732,7 +461,7 @@ const DashboardMiddleContent: React.FC = () => {
 
         {/* Total Sales */}
         <div
-          className={`w-[202px] min-w-[202px] max-w-[272px] p-6 rounded-2xl ${
+          className={`w-48 flex-shrink-0 p-4 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-white"
           } shadow-sm`}
         >
@@ -744,7 +473,7 @@ const DashboardMiddleContent: React.FC = () => {
             Total Sales
           </h3>
           <div className="flex justify-center mb-4">
-            <div className="relative w-32 h-32">
+            <div className="relative w-24 h-24">
               <svg
                 className="w-full h-full transform -rotate-90"
                 viewBox="0 0 100 100"
@@ -752,25 +481,24 @@ const DashboardMiddleContent: React.FC = () => {
                 <circle
                   cx="50"
                   cy="50"
-                  r="40"
+                  r="35"
                   stroke={isDark ? "#374151" : "#E5E7EB"}
-                  strokeWidth="10"
+                  strokeWidth="8"
                   fill="none"
                 />
                 <circle
                   cx="50"
                   cy="50"
-                  r="40"
+                  r="35"
                   stroke="#10B981"
-                  strokeWidth="10"
+                  strokeWidth="8"
                   fill="none"
-                  strokeDasharray={`${38.6 * 2.51} ${251.2 - 38.6 * 2.51}`}
-                  className="transition-all duration-1000"
+                  strokeDasharray={`${38.6 * 2.2} ${220 - 38.6 * 2.2}`}
                 />
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
                 <span
-                  className={`text-lg font-semibold ${
+                  className={`text-sm font-semibold ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
@@ -783,9 +511,9 @@ const DashboardMiddleContent: React.FC = () => {
             {salesData.map((sale, index) => (
               <div key={index} className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
-                  <div className={`w-3 h-3 rounded-full ${sale.color}`}></div>
+                  <div className={`w-2 h-2 rounded-full ${sale.color}`}></div>
                   <span
-                    className={`text-sm ${
+                    className={`text-xs ${
                       isDark ? "text-gray-300" : "text-gray-600"
                     }`}
                   >
@@ -793,7 +521,7 @@ const DashboardMiddleContent: React.FC = () => {
                   </span>
                 </div>
                 <span
-                  className={`text-sm font-medium ${
+                  className={`text-xs font-medium ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
@@ -808,28 +536,21 @@ const DashboardMiddleContent: React.FC = () => {
   );
 };
 
-// Main Dashboard Component
+// Main Dashboard Component (simplified - no longer manages RightSidebar)
 const Dashboard: React.FC = () => {
-  const [isDark, setIsDark] = React.useState(false);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
+  const { isDark } = React.useContext(ThemeContext);
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      <div
-        className={`w-[1200px] h-screen flex flex-col overflow-hidden ${
-          isDark ? "bg-black" : "bg-gray-50"
-        }`}
-      >
-        <Header />
-        <div className="flex-1 flex w-auto">
-          <LeftSidebar />
-          <DashboardMiddleContent />
-        </div>
+    <div className={`h-screen flex flex-col ${isDark ? "bg-black" : "bg-gray-50"}`}>
+      {/* Header spans full width */}
+      <Header />
+
+      {/* Main content area with sidebar layout */}
+      <div className="flex-1 flex overflow-hidden">
+        <LeftSidebar />
+        <DashboardMiddleContent />
       </div>
-    </ThemeContext.Provider>
+    </div>
   );
 };
 

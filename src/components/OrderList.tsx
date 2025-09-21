@@ -24,7 +24,7 @@ const OrderListPage: React.FC = () => {
         <div className="flex-1 flex w-auto">
           <LeftSidebar />
           <MiddleContent />
-          <RightSidebar />
+
         </div>
       </div>
     </ThemeContext.Provider>
