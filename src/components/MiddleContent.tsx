@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   MoreHorizontal,
+  AlignCenter, AlignJustify,
 } from "lucide-react";
 import { ThemeContext } from "./ThemeContext";
 //import StatusBadge, { Order } from "./StatusBadge";
@@ -126,7 +127,7 @@ const MiddleContent: React.FC = () => {
 
   return (
     <div
-      className={`flex-1 w-auto h-auto overflow-hidden ml-8 ${
+      className={`flex-1 w-[1172px] h-auto overflow-hidden ml-8 ${
         isDark ? "bg-black" : "bg-gray-50"
       }`}
     >
@@ -174,7 +175,7 @@ const MiddleContent: React.FC = () => {
                   isDark ? "hover:bg-gray-700" : "hover:bg-gray-50"
                 }`}
               >
-                <Filter
+                <AlignCenter
                   className={`w-5 h-5 ${
                     isDark ? "text-gray-300" : "text-gray-600"
                   }`}
@@ -222,7 +223,7 @@ const MiddleContent: React.FC = () => {
               }`}
             >
               <tr className="h-10 min-h-10">
-                <th className="pt-2 pr-3 pb-2 pl-3 text-left group">
+                <th className="pt-2 pr-2 pb-2 pl-3 ml-2 text-left group">
                   <input
                     type="checkbox"
                     checked={selectAll}
@@ -316,7 +317,7 @@ const MiddleContent: React.FC = () => {
                       />
                     </td>
                     <td
-                      className={`pt-2 pr-3 pb-2 pl-2 text-sm ${
+                      className={`pt-2 pr-3 pb-2 pl-2 text-left text-[12px] ${
                         isDark ? "text-white" : "text-black"
                       }`}
                     >
@@ -325,7 +326,7 @@ const MiddleContent: React.FC = () => {
                     <td className="pt-2 pr-3 pb-2 pl-2">
                       <div className="flex items-center">
                         <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center">
-                          <span className="text-xs text-black">
+                          <span className="text-[12px] text-black">
                             {order.user.name
                               .split(" ")
                               .map((n) => n[0])
@@ -333,7 +334,7 @@ const MiddleContent: React.FC = () => {
                           </span>
                         </div>
                         <span
-                          className={`text-sm ${
+                          className={`text-[12px] ${
                             isDark ? "text-white" : "text-black"
                           }`}
                         >
@@ -342,21 +343,21 @@ const MiddleContent: React.FC = () => {
                       </div>
                     </td>
                     <td
-                      className={`pt-2 pr-3 pb-2 pl-2 text-sm text-left ${
+                      className={`pt-2 pr-3 pb-2 pl-2 text-sm text-left text-[12px] ${
                         isDark ? "text-white" : "text-black"
                       }`}
                     >
                       {order.project}
                     </td>
                     <td
-                      className={`pt-2 pr-3 pb-2 pl-2 text-sm text-left ${
+                      className={`pt-2 pr-3 pb-2 pl-2 text-[12px] text-left ${
                         isDark ? "text-white" : "text-black"
                       }`}
                     >
                       {order.address}
                     </td>
                     <td
-                      className={`pt-2 pr-3 pb-2 pl-2 text-sm text-left ${
+                      className={`pt-2 pr-3 pb-2 pl-2 text-[12px] text-left ${
                         isDark ? "text-white" : "text-black"
                       }`}
                     >
@@ -369,7 +370,7 @@ const MiddleContent: React.FC = () => {
                         {order.date}
                       </div>
                     </td>
-                    <td className="pt-2 pr-3 pb-2 pl-2 text-left">
+                    <td className="pt-2 pr-3 pb-2 pl-2 text-[12px] text-left">
                       <StatusBadge status={order.status} />
                     </td>
                     <td className="pt-2 pr-3 pb-2 pl-2 text-center">

@@ -6,6 +6,8 @@ import {
   MessageCircle,
   ShoppingBag,
   ChartPie,
+  ChevronRight,
+  ChevronDown,
 } from "lucide-react";
 import AccountBoxTwoToneIcon from "@mui/icons-material/AccountBoxTwoTone";
 import ContactMailTwoToneIcon from "@mui/icons-material/ContactMailTwoTone";
@@ -23,11 +25,11 @@ const LeftSidebar: React.FC = () => {
     >
       {/* Logo */}
       <div className="flex items-center">
-        <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center">
+        <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
           <span className="text-white text-xs font-bold">B</span>
         </div>
         <span
-          className={`ml-2 text-sm font-medium ${
+          className={`ml-2 text-sm ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
@@ -96,7 +98,7 @@ const LeftSidebar: React.FC = () => {
       {/* Dashboards Section */}
       <div>
         <div
-          className={`text-xs font-medium uppercase tracking-wider mb-3 ${
+          className={`text-sm text-left tracking-wider mb-3 ${
             isDark ? "text-gray-500" : "text-gray-400"
           }`}
         >
@@ -108,6 +110,11 @@ const LeftSidebar: React.FC = () => {
               isDark ? "text-white bg-gray-800" : "text-gray-700 bg-black/10"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <ChartPie className="w-4 h-4 mr-3" />
             Default
           </div>
@@ -118,6 +125,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <ShoppingBag
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -132,6 +144,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <FolderOpen
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -146,6 +163,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <BookOpen
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -159,7 +181,7 @@ const LeftSidebar: React.FC = () => {
       {/* Pages Section */}
       <div>
         <div
-          className={`text-xs font-medium uppercase tracking-wider mb-3 ${
+          className={`text-sm text-left tracking-wider mb-3 ${
             isDark ? "text-gray-500" : "text-gray-400"
           }`}
         >
@@ -173,6 +195,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronDown
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <AccountBoxTwoToneIcon
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -182,7 +209,7 @@ const LeftSidebar: React.FC = () => {
           </div>
 
           {/* Sub-menu items for User Profile */}
-          <div className="ml-7 space-y-1">
+          <div className="ml-9 space-y-1 text-left">
             <div
               className={`text-sm px-2 py-1 rounded cursor-pointer ${
                 isDark
@@ -237,6 +264,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <ContactMailTwoToneIcon
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -251,6 +283,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <GroupsOutlinedIcon
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -265,6 +302,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <FileText
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"
@@ -279,6 +321,11 @@ const LeftSidebar: React.FC = () => {
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
+            <ChevronRight
+              className={`w-4 h-4 mr-2 ${
+                isDark ? "text-gray-400" : "text-gray-500"
+              }`}
+            />
             <MessageCircle
               className={`w-4 h-4 mr-3 ${
                 isDark ? "text-gray-400" : "text-gray-500"

@@ -16,7 +16,7 @@ const OrderListPage: React.FC = () => {
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <div
-        className={`w-full h-screen flex flex-col overflow-hidden ${
+        className={`w-auto h-screen flex flex-col overflow-hidden ${
           isDark ? "bg-black" : "bg-gray-50"
         }`}
       >
