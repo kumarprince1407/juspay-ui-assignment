@@ -82,23 +82,19 @@ const DashboardMiddleContent: React.FC = () => {
           <div className="space-y-3">
             {/* Customers Card */}
             <div
-              className={`p-3 rounded-lg w-48 h-24 ${
-                isDark ? "bg-gray-800" : "bg-blue-50"
+              className={`p-3 rounded-lg w-45 h-25 ${
+                isDark ? "bg-[#E3F5FF]" : "bg-blue-50"
               } shadow-sm`}
             >
               <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-sm text-left font-semibold ${
-                    isDark ? "text-gray-400" : "text-gray-600"
-                  }`}
+                  className={`text-sm text-left font-semibold text-gray-500 `}
                 >
                   Customers
                 </div>
                 <div className="flex justify-between items-center">
                   <div
-                    className={`text-xl font-semibold ${
-                      isDark ? "text-white" : "text-gray-900"
-                    }`}
+                    className={`text-xl font-semibold text-black `}
                   >
                     3,781
                   </div>
@@ -113,8 +109,8 @@ const DashboardMiddleContent: React.FC = () => {
 
             {/* Revenue Card */}
             <div
-              className={`p-3 rounded-lg w-48 h-24 ${
-                isDark ? "bg-gray-800" : "bg-gray-50"
+              className={`p-3 rounded-lg w-45 h-25 ${
+                isDark ? "bg-gray-800" : "bg-gray-100"
               } shadow-sm`}
             >
               <div className="flex flex-col justify-around h-full">
@@ -147,8 +143,8 @@ const DashboardMiddleContent: React.FC = () => {
           <div className="space-y-3">
             {/* Orders Card */}
             <div
-              className={`p-3 rounded-lg w-48 h-24 ${
-                isDark ? "bg-gray-800" : "bg-blue-50"
+              className={`p-3 rounded-lg w-45 h-25 ${
+                isDark ? "bg-gray-800" : "bg-gray-100"
               } shadow-sm`}
             >
               <div className="flex flex-col justify-around h-full">
@@ -178,29 +174,23 @@ const DashboardMiddleContent: React.FC = () => {
 
             {/* Growth Card */}
             <div
-              className={`p-3 rounded-lg w-48 h-24 ${
-                isDark ? "bg-gray-800" : "bg-blue-50"
-              } shadow-sm`}
+              className={`p-3 rounded-lg w-45 h-25 bg-[#E5ECF6]`}
             >
               <div className="flex flex-col justify-around h-full">
                 <div
-                  className={`text-sm text-left font-semibold ${
-                    isDark ? "text-gray-400" : "text-gray-600"
-                  }`}
+                  className={`text-sm text-left font-semibold text-gray-700
+                   `}
                 >
                   Growth
                 </div>
                 <div className="flex justify-between items-center">
                   <div
-                    className={`text-xl font-semibold ${
-                      isDark ? "text-white" : "text-gray-900"
-                    }`}
+                    className={`text-xl font-semibold text-black`}
                   >
                     30.1%
                   </div>
-                  <div className={`text-xs ${
-                                             isDark ? "text-white" : "text-gray-900"
-                                                                                      }`}>
+                  <div className={`text-xs text-black
+                                                                                      `}>
                     +6.08% <span className="ml-1">↗</span>
                   </div>
                 </div>
@@ -242,18 +232,18 @@ const DashboardMiddleContent: React.FC = () => {
               </text>
 
               {/* Chart bars */}
-              <rect x="45" y="72" width="15" height="30" fill="#5B9BD5" rx="2" />
-              <rect x="45" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
-              <rect x="85" y="32" width="15" height="50" fill="#5B9BD5" rx="2" />
-              <rect x="85" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
-              <rect x="125" y="57" width="15" height="25" fill="#5B9BD5" rx="2" />
-              <rect x="125" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
-              <rect x="165" y="42" width="15" height="40" fill="#5B9BD5" rx="2" />
-              <rect x="165" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
-              <rect x="205" y="72" width="15" height="15" fill="#5B9BD5" rx="2" />
-              <rect x="205" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
-              <rect x="245" y="42" width="15" height="40" fill="#5B9BD5" rx="2" />
-              <rect x="245" y="92" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="45" y="72" width="15" height="30" fill="#C6D7EB" rx="2" />
+              <rect x="45" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="85" y="32" width="15" height="60" fill="#C6D7EB" rx="2" />
+              <rect x="85" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="125" y="57" width="15" height="35" fill="#C6D7EB" rx="2" />
+              <rect x="125" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="165" y="42" width="15" height="50" fill="#C6D7EB" rx="2" />
+              <rect x="165" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="205" y="72" width="15" height="19" fill="#C6D7EB" rx="2" />
+              <rect x="205" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
+              <rect x="245" y="42" width="15" height="49" fill="#C6D7EB" rx="2" />
+              <rect x="245" y="92" width="15" height="30" fill="#5B9BD5" rx="2" />
 
               {/* Month labels */}
               <text x="50" y="150" className="text-xs fill-gray-500 font-inter">Jan</text>
@@ -268,7 +258,7 @@ const DashboardMiddleContent: React.FC = () => {
       </div>
 
       {/* Revenue Chart and Revenue by Location Row */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex gap-4 mb-6 h-[318px]">
         {/* Revenue Chart */}
         <div
           className={`flex-1 min-w-0 p-4 rounded-2xl ${
@@ -277,81 +267,158 @@ const DashboardMiddleContent: React.FC = () => {
         >
           <div className="flex justify-between items-center mb-4">
             <h3
-              className={`text-lg font-medium ${
+              className={`text-sm font-semibold ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
             >
               Revenue
             </h3>
-            <div className="flex gap-4 text-sm">
+            <div className="flex gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-black"></div>
+              <div className="flex">
+                <span className={isDark ? "text-white" : "text-black"}>•</span>
                 <span className={isDark ? "text-gray-400" : "text-gray-600"}>
                   Current Week $58,211
                 </span>
+                </div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-gray-400"></div>
+              <div className="flex">
+                <span className={isDark ? "text-white" : "text-black"}>•</span>
                 <span className={isDark ? "text-gray-400" : "text-gray-600"}>
-                  Previous Week $58,768
+                  Previous Week $68,768
                 </span>
+                </div>
               </div>
             </div>
           </div>
-          <div className="h-48 flex items-center justify-center">
-            <svg width="100%" height="100%" viewBox="0 0 500 200">
-              {/* Current Week Line */}
-              <polyline
-                points="50,120 100,100 150,110 200,85 250,95 300,75 350,90 400,70 450,85"
-                fill="none"
-                stroke={isDark ? "#FFFFFF" : "#000000"}
-                strokeWidth="2"
-              />
-              {/* Previous Week Line */}
-              <polyline
-                points="50,140 100,125 150,135 200,115 250,130 300,110 350,125 400,105 450,120"
-                fill="none"
-                stroke={isDark ? "#9CA3AF" : "#6B7280"}
-                strokeWidth="2"
-                strokeDasharray="5,5"
-              />
-              {/* Month labels */}
-              <text x="70" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jan</text>
-              <text x="130" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Feb</text>
-              <text x="190" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Mar</text>
-              <text x="250" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Apr</text>
-              <text x="310" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jun</text>
-              <text x="370" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>May</text>
-              <text x="430" y="190" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`}>Jun</text>
-            </svg>
+
+          {/* Y-axis labels */}
+          <div className="relative h-48">
+            <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500 py-2">
+              <span>30M</span>
+              <span>20M</span>
+              <span>10M</span>
+              <span>0</span>
+            </div>
+
+            {/* Chart area */}
+            <div className="ml-8 h-full">
+              <svg width="100%" height="100%" viewBox="0 0 400 180" className="overflow-visible">
+                {/* Grid lines */}
+                <defs>
+                  <linearGradient id="currentWeekGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style={{stopColor: '#000000', stopOpacity: 0.1}} />
+                    <stop offset="100%" style={{stopColor: '#000000', stopOpacity: 0}} />
+                  </linearGradient>
+                  <linearGradient id="previousWeekGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style={{stopColor: '#9CA3AF', stopOpacity: 0.1}} />
+                    <stop offset="100%" style={{stopColor: '#9CA3AF', stopOpacity: 0}} />
+                  </linearGradient>
+                </defs>
+
+                {/* Current Week Area */}
+                <path
+                  d="M 50,140 Q 80,120 120,110 T 200,95 T 300,85 T 350,90 L 350,180 L 50,180 Z"
+                  fill="url(#currentWeekGradient)"
+                />
+
+                {/* Previous Week Area */}
+                <path
+                  d="M 50,160 Q 80,130 120,125 T 200,115 T 300,105 T 350,100 L 350,180 L 50,180 Z"
+                  fill="url(#previousWeekGradient)"
+                />
+
+                {/* Current Week Line */}
+                <path
+                  d="M 50,140 Q 80,120 120,110 T 200,95 T 300,85 T 350,90"
+                  fill="none"
+                  stroke={isDark ? "#FFFFFF" : "#000000"}
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+
+                {/* Previous Week Line */}
+                <path
+                  d="M 50,160 Q 80,130 120,125 T 200,115 T 300,105 T 350,100"
+                  fill="none"
+                  stroke={isDark ? "#9CA3AF" : "#9CA3AF"}
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeDasharray="8,4"
+                />
+
+                {/* Month labels */}
+                <text x="50" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">Jan</text>
+                <text x="110" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">Feb</text>
+                <text x="170" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">Mar</text>
+                <text x="230" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">Apr</text>
+                <text x="290" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">May</text>
+                <text x="350" y="200" className={`text-xs fill-current ${isDark ? "text-gray-400" : "text-gray-500"}`} textAnchor="middle">Jun</text>
+              </svg>
+            </div>
           </div>
         </div>
 
         {/* Revenue by Location */}
         <div
-          className={`w-48 flex-shrink-0 p-4 rounded-2xl ${
+          className={`w-52 rounded-2xl ${
             isDark ? "bg-gray-800" : "bg-white"
           } shadow-sm`}
         >
           <h3
-            className={`text-lg font-medium ${
+            className={` font-semibold ${
               isDark ? "text-white" : "text-gray-900"
             } mb-4`}
           >
             Revenue by Location
           </h3>
-          <div className="space-y-3">
+
+          {/* World Map */}
+          <div className="mb-4 h-32 relative bg-gray-50 rounded-lg overflow-hidden flex items-center justify-center">
+            <svg width="280" height="120" viewBox="0 0 280 120" className="text-gray-300">
+              {/* Simplified world map outline */}
+              <path
+                d="M40,60 Q50,50 70,55 L90,50 Q100,45 120,50 L140,45 Q160,40 180,45 L200,40 Q220,35 240,40 L240,70 Q220,75 200,70 L180,75 Q160,80 140,75 L120,80 Q100,85 90,80 L70,85 Q50,90 40,80 Z"
+                fill="currentColor"
+                className="opacity-20"
+              />
+
+              {/* Location dots */}
+              <circle cx="80" cy="45" r="3" fill="#3B82F6" className="animate-pulse" />
+              <circle cx="160" cy="50" r="3" fill="#3B82F6" className="animate-pulse" />
+              <circle cx="200" cy="70" r="3" fill="#3B82F6" className="animate-pulse" />
+              <circle cx="220" cy="55" r="3" fill="#3B82F6" className="animate-pulse" />
+
+              {/* Continents outline for better geography */}
+              <path
+                d="M60,35 Q80,30 100,35 L120,30 Q140,25 160,30 L160,50 Q140,55 120,50 L100,55 Q80,60 60,55 Z"
+                fill="currentColor"
+                className="opacity-10"
+              />
+              <path
+                d="M170,40 Q190,35 210,40 L230,35 Q250,30 270,35 L270,65 Q250,70 230,65 L210,70 Q190,75 170,70 Z"
+                fill="currentColor"
+                className="opacity-10"
+              />
+            </svg>
+          </div>
+
+          {/* Location data */}
+          <div className="space-y-2">
             {locationData.map((location, index) => (
-              <div key={index} className="flex justify-between items-center">
+              <div key={index} className="flex justify-between items-center py-1">
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`text-sm ${
+                      isDark ? "text-gray-300" : "text-gray-600"
+                    }`}
+                  >
+                    &nbsp; {location.city}
+                  </span>
+                </div>
                 <span
-                  className={`text-sm ${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
-                  {location.city}
-                </span>
-                <span
-                  className={`text-sm font-medium ${
+                  className={`text-sm font-semibold ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
@@ -368,12 +435,12 @@ const DashboardMiddleContent: React.FC = () => {
         {/* Top Selling Products */}
         <div
           className={`flex-1 min-w-0 p-4 rounded-2xl ${
-            isDark ? "bg-gray-800" : "bg-white"
+            isDark ? "bg-gray-900" : "bg-gray-100"
           } shadow-sm`}
         >
           <h3
-            className={`text-lg font-medium ${
-              isDark ? "text-white" : "text-gray-900"
+            className={`text-sm text-left font-medium ${
+              isDark ? "text-white" : "text-black"
             } mb-4`}
           >
             Top Selling Products
@@ -387,30 +454,22 @@ const DashboardMiddleContent: React.FC = () => {
                   }`}
                 >
                   <th
-                    className={`text-left py-2 text-sm ${
-                      isDark ? "text-gray-400" : "text-gray-600"
-                    }`}
+                    className={`text-left py-2 text-xs text-black/40 `}
                   >
                     Name
                   </th>
                   <th
-                    className={`text-left py-2 text-sm ${
-                      isDark ? "text-gray-400" : "text-gray-600"
-                    }`}
+                    className={`text-left py-2 text-xs text-black/40 `}
                   >
                     Price
                   </th>
                   <th
-                    className={`text-left py-2 text-sm ${
-                      isDark ? "text-gray-400" : "text-gray-600"
-                    }`}
+                    className={`text-left py-2 text-xs text-black/40 `}
                   >
                     Quantity
                   </th>
                   <th
-                    className={`text-left py-2 text-sm ${
-                      isDark ? "text-gray-400" : "text-gray-600"
-                    }`}
+                    className={`text-left py-2 text-xs text-black/40 `}
                   >
                     Amount
                   </th>
@@ -425,28 +484,28 @@ const DashboardMiddleContent: React.FC = () => {
                     }`}
                   >
                     <td
-                      className={`py-2 text-sm ${
+                      className={`py-2 text-sm text-left ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
                     >
                       {product.name}
                     </td>
                     <td
-                      className={`py-2 text-sm ${
+                      className={`py-2 text-sm text-left ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
                       {product.price}
                     </td>
                     <td
-                      className={`py-2 text-sm ${
+                      className={`py-2 text-sm text-left ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
                       {product.quantity}
                     </td>
                     <td
-                      className={`py-2 text-sm font-medium ${
+                      className={`py-2 text-sm font-medium text-left${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
                     >
@@ -462,7 +521,7 @@ const DashboardMiddleContent: React.FC = () => {
         {/* Total Sales */}
         <div
           className={`w-48 flex-shrink-0 p-4 rounded-2xl ${
-            isDark ? "bg-gray-800" : "bg-white"
+            isDark ? "bg-gray-900" : "bg-gray-100"
           } shadow-sm`}
         >
           <h3

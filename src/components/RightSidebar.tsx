@@ -43,7 +43,7 @@ const RightSidebar: React.FC = () => {
     {
       id: 2,
       avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face&auto=format",
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=32&h=32&fit=crop&crop=face&auto=format",
       title: "Released a new version",
       time: "59 minutes ago",
     },
@@ -75,7 +75,7 @@ const RightSidebar: React.FC = () => {
       id: 1,
       name: "Natali Craig",
       avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face&auto=format",
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=32&h=32&fit=crop&crop=face&auto=format",
     },
     {
       id: 2,
@@ -120,13 +120,13 @@ const RightSidebar: React.FC = () => {
       {/* Notifications Section */}
       <div>
         <h3
-          className={`text-lg font-semibold mb-4 ${
+          className={`text-sm text-left font-semibold mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
           Notifications
         </h3>
-        <div className="space-y-3">
+        <div className="space-y-3 text-left">
           {notifications.map((notification) => (
             <div key={notification.id} className="flex items-start gap-3">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
@@ -154,9 +154,9 @@ const RightSidebar: React.FC = () => {
       </div>
 
       {/* Activities Section */}
-      <div>
+      <div className="text-left">
         <h3
-          className={`text-lg font-semibold mb-4 ${
+          className={`text-sm text-left font-semibold mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
@@ -194,7 +194,7 @@ const RightSidebar: React.FC = () => {
       {/* Contacts Section */}
       <div>
         <h3
-          className={`text-lg font-semibold mb-4 ${
+          className={`text-sm text-left font-semibold mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
